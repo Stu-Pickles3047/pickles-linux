@@ -27,9 +27,33 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
     p {
       font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      text-align: left;
+      display: inline-block;
       margin-bottom: 2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    pre {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: left;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    code {
+      font-family: 'Courier New', monospace;
     }
     .footer {
       font-size: 0.9rem;
@@ -49,21 +73,30 @@
 <body>
   <div class="container">
     <h1>🐧 Pickles Linux Repo</h1>
-    <p>Welcome to the Holding page for Pickles Linux Repository.</p>
+    <p>Welcome to Pickles Linux Repository.</p>
     <p>
       You have reached the repo for Pickles Linux.
-      This Repo is not currently open to the public.<br><br>
-      Current Available Packages:<br>
-      <a href="https://github.com/Stu-Pickles3047/pickles-update">Pickles-Update</a><br>
-      <a href="https://github.com/Stu-Pickles3047/Pickles-Weather">Pickles-Weather for conky</a><br>
-      COMING SOON: Pickles-Man_viewer<br>
-
+      This Repo is currently open to the public. <br>
+      <em>Note: This is not an official repo, just a personal one for testing Packages</em>
+      <br>
     </p>
+    <h2>How to Add This Repository</h2>
+    <p>To add this repository to your Arch Linux system, add the following to your <code>/etc/pacman.conf</code>:</p>
+    <pre><code>[pickles-linux]
+SigLevel = Optional TrustAll
+Server = https://stu-pickles3047.github.io/pickles-linux/</code></pre>
+    <p>Then update your package list with <code>pacman -Sy</code> and install packages with <code>pacman -S package-name</code>.</p>
+    <h2>Available Packages</h2>
+    <ul>
+      <li><a href="https://github.com/Stu-Pickles3047/pickles-update">Pickles-Update</a> - A tool for updating packages in arch linux based distro's</li>
+      <li><a href="https://github.com/Stu-Pickles3047/Pickles-Weather">Pickles-Weather</a> - A weather display widget for Conky. Includes setting default conky config to Pickles weather</li>
+      <li>Pickles-Man-Viewer - A graphical man page viewer. (Page under construction, but PreRelease package available)</li>
+    </ul>
     <p>
       Visit our <a href="https://github.com/Stu-Pickles3047">Stu Pickles3047 on GitHub</a> or check back later for updates.
     </p>
     <div class="footer">
-     
+      This work is dedicated to the public domain under the <a href="https://unlicense.org/">Unlicense</a>.
     </div>
   </div>
 </body>
